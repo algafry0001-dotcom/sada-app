@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b1730">
+  <meta name="description" content="صدى SADA — تواصل بلا حدود، خصوصية بلا تنازلات">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>صدى | SADA</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><div class="brand-mark">S</div><div><strong>صدى</strong><small>SADA</small></div></div>
+      <button class="icon-btn" id="languageBtn" aria-label="Change language">文</button>
+    </header>
+
+    <main>
+      <section class="welcome">
+        <div class="eyebrow" data-i18n="private">خصوصيتك أولويتنا</div>
+        <h1 data-i18n="headline">تواصل أقرب،<br>بخصوصية أكبر.</h1>
+        <p data-i18n="intro">مكان واحد يجمع محادثاتك ومجتمعاتك — بتجربة بسيطة وواضحة.</p>
+      </section>
+
+      <section class="auth-card">
+        <div class="tabs">
+          <button class="tab active" data-tab="login" data-i18n="login">تسجيل الدخول</button>
+          <button class="tab" data-tab="register" data-i18n="create">إنشاء حساب</button>
+        </div>
+        <form id="authForm">
+          <label for="method" data-i18n="loginMethod">طريقة التسجيل</label>
+          <select id="method">
+            <option value="email" data-i18n="email">البريد الإلكتروني</option>
+            <option value="phone" data-i18n="phone">رقم الهاتف</option>
+          </select>
+          <label for="identity" id="identityLabel" data-i18n="emailAddress">البريد الإلكتروني</label>
+          <input id="identity" type="email" placeholder="name@example.com" autocomplete="email" required>
+          <div id="extraFields" class="hidden">
+            <label for="username" data-i18n="username">اسم المستخدم</label>
+            <input id="username" type="text" placeholder="@username" maxlength="24" autocomplete="username">
+            <label for="password" data-i18n="password">كلمة المرور</label>
+            <input id="password" type="password" placeholder="••••••••" minlength="8" autocomplete="new-password">
+          </div>
+          <button class="primary-btn" type="submit" data-i18n="continue">متابعة</button>
+          <p class="form-note" data-i18n="oneEmail">يسمح صدى بعنوان بريد إلكتروني واحد فقط لكل حساب.</p>
+          <p id="notice" role="status" class="notice"></p>
+        </form>
+      </section>
+
+      <section class="features">
+        <div class="feature"><span>✦</span><div><b data-i18n="simple">بسيط وسهل</b><small data-i18n="simpleDesc">واجهة واضحة تتأقلم معها بسرعة</small></div></div>
+        <div class="feature"><span>⌁</span><div><b data-i18n="languages">لغات العالم</b><small data-i18n="languagesDesc">بنية قابلة لإضافة لغات كثيرة</small></div></div>
+        <div class="feature"><span>♢</span><div><b data-i18n="privacy">الخصوصية</b><small data-i18n="privacyDesc">الخصوصية مبدأ أساسي في التصميم</small></div></div>
+      </section>
+    </main>
+    <footer><span>© SADA</span><span data-i18n="tagline">تواصل بلا حدود، خصوصية بلا تنازلات.</span></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
